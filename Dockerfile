@@ -1,8 +1,8 @@
-FROM openjdk:8u181-jdk-alpine3.8
+FROM brscanner/java:alpine-jdk11u
 ENV PRODUCT='jboss-eap-7.0'                                                                            \
     JBOSS_USER='jboss'
 ENV ADMIN_USER='admin'                                                                                 \
-    ADMIN_PASSWORD='Admin.123'                                                                         \
+    ADMIN_PASSWORD='pass123word$$'                                                                         \
     JBOSS_USER_HOME="/home/${JBOSS_USER}"                                                              \
     DOWNLOAD_BASE_URL="https://github.com/daggerok/${PRODUCT}/releases/download"                       \
     JBOSS_EAP_PATCH='7.0.9'

@@ -39,4 +39,5 @@ RUN wget ${ARCHIVES_BASE_URL}/${JDK_VERSION}.tar.gz -q --no-cookies --no-check-c
      rm -rf /tmp/install.sh ) )
 WORKDIR /home/jboss
 EXPOSE 8080 8443 9990
-ENTRYPOINT ${JBOSS_HOME}/bin/standalone.sh
+ENTRYPOINT ["/bin/sh", "-c", "${JBOSS_HOME}/bin/standalone.sh"]
+CMD ["-b", "0.0.0.0"]
